@@ -1,0 +1,151 @@
+/* Table container */
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+/* Table header */
+.crypto-table thead th {
+  background-color: #f8f9fa;
+  padding: 14px 8px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+  height: 56px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Table body rows */
+.crypto-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  height: 56px;
+}
+
+/* Table body cells */
+.crypto-table tbody td {
+  padding: 14px 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Index column */
+.crypto-table tbody td:nth-child(1),
+.crypto-table thead th:nth-child(1) {
+  width: 40px;
+  text-align: center;
+}
+
+/* Name column with logo and token name */
+.crypto-table tbody td:nth-child(2),
+.crypto-table thead th:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* Reduced gap between logo and name */
+  min-width: 180px;
+}
+
+/* Logo image */
+.crypto-table tbody td:nth-child(2) img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Token symbol style */
+.token-symbol {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+/* Price and percentage change columns */
+.crypto-table tbody td:nth-child(3),
+.crypto-table tbody td:nth-child(4),
+.crypto-table tbody td:nth-child(5),
+.crypto-table tbody td:nth-child(6),
+.crypto-table thead th:nth-child(3),
+.crypto-table thead th:nth-child(4),
+.crypto-table thead th:nth-child(5),
+.crypto-table thead th:nth-child(6) {
+  width: 80px;
+  text-align: right;
+  padding-left: 12px; /* Increased gap on left */
+}
+
+/* Market Cap and Volume columns */
+.crypto-table tbody td:nth-child(7),
+.crypto-table tbody td:nth-child(8),
+.crypto-table thead th:nth-child(7),
+.crypto-table thead th:nth-child(8) {
+  width: 120px;
+  text-align: right;
+  padding-left: 16px; /* Increased gap on left */
+}
+
+/* Circulating Supply column */
+.crypto-table tbody td:nth-child(9),
+.crypto-table thead th:nth-child(9) {
+  width: 100px;
+  text-align: right;
+  padding-left: 14px; /* Increased gap on left */
+}
+
+/* Chart column */
+.crypto-table tbody td:nth-child(10) img,
+.crypto-table thead th:nth-child(10) {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+  text-align: center;
+  padding-left: 10px; /* Slight gap */
+}
+
+/* Color coding for positive and negative values */
+.green {
+  color: #28a745;
+}
+
+.red {
+  color: #dc3545;
+}
+
+/* Arrows for percentage changes */
+.arrow {
+  font-size: 0.7em;
+  margin-right: 2px;
+}
+
+.arrow.up {
+  color: #28a745;
+}
+
+.arrow.down {
+  color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .crypto-table tbody td:nth-child(2),
+  .crypto-table thead th:nth-child(2) {
+    min-width: 140px;
+  }
+  .crypto-table tbody td:nth-child(7),
+  .crypto-table tbody td:nth-child(8),
+  .crypto-table tbody td:nth-child(9),
+  .crypto-table thead th:nth-child(7),
+  .crypto-table thead th:nth-child(8),
+  .crypto-table thead th:nth-child(9) {
+    width: 90px;
+  }
+  .crypto-table tbody td:nth-child(10) img,
+  .crypto-table thead th:nth-child(10) {
+    width: 80px;
+    height: 32px;
+  }
+}
