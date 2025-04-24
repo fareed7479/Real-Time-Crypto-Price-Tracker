@@ -46,7 +46,7 @@
 .crypto-table thead th:nth-child(2) {
   display: flex;
   align-items: center;
-  gap: 2px; /* Reduced gap between logo and name */
+  gap: 20px; /* Increased gap for nicer look */
   min-width: 180px;
 }
 
@@ -55,6 +55,8 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+  vertical-align: middle;
+  padding-right: 10px;
 }
 
 /* Token symbol style */
@@ -62,6 +64,7 @@
   color: #666;
   font-size: 0.9em;
   margin-left: 4px;
+  vertical-align: middle;
 }
 
 /* Price and percentage change columns */
@@ -75,7 +78,7 @@
 .crypto-table thead th:nth-child(6) {
   width: 80px;
   text-align: right;
-  padding-left: 12px; /* Increased gap on left */
+  padding-left: 12px;
 }
 
 /* Market Cap and Volume columns */
@@ -85,7 +88,7 @@
 .crypto-table thead th:nth-child(8) {
   width: 120px;
   text-align: right;
-  padding-left: 16px; /* Increased gap on left */
+  padding-left: 16px;
 }
 
 /* Circulating Supply column */
@@ -93,7 +96,8 @@
 .crypto-table thead th:nth-child(9) {
   width: 100px;
   text-align: right;
-  padding-left: 14px; /* Increased gap on left */
+  padding-left: 14px;
+
 }
 
 /* Chart column */
@@ -103,7 +107,7 @@
   height: 40px;
   object-fit: contain;
   text-align: center;
-  padding-left: 10px; /* Slight gap */
+  padding-left: 10px;
 }
 
 /* Color coding for positive and negative values */
