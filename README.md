@@ -1,46 +1,51 @@
 # Real-Time Crypto Price Tracker
 
-## Overview
-This is a React + Redux Toolkit application that tracks real-time cryptocurrency prices with simulated WebSocket updates. The app displays a responsive table of 5 cryptocurrencies with live price and percentage changes.
+A simple and responsive web application that tracks real-time cryptocurrency prices using React and Redux Toolkit. This application displays live price updates for popular cryptocurrencies and simulates real-time data updates.
 
 ## Features
-- Displays 5 assets: Bitcoin, Ethereum, Tether, Cardano, Ripple
-- Responsive table with color-coded percentage changes
-- Simulated real-time updates using setInterval
-- State management with Redux Toolkit (createSlice, configureStore)
-- Components: CryptoTable, CryptoRow, Chart
+
+- Displays a responsive table of cryptocurrencies.
+- Shows live prices and percentage changes.
+- Simulated real-time updates using `setInterval`.
+- Color-coded price changes for easy visualization.
+- Static chart representation of price trends over the last 7 days.
+
+## Supported Cryptocurrencies
+
+- Bitcoin (BTC)
+- Ethereum (ETH)
+- Tether (USDT)
+- Cardano (ADA)
+- Ripple (XRP)
 
 ## Tech Stack
-- React
-- Redux Toolkit
-- CSS
 
-## Setup Instructions
+- **Frontend**: React
+- **State Management**: Redux Toolkit
+- **Styling**: CSS
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd crypto-price-tracker
-   ```
+## Getting Started
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
+To set up the project locally, follow these steps:
 
-3. Run the application:
-   ```
-   npm start
-   ```
+### Prerequisites
 
-## Architecture Overview
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
 
-- **Components**:
-  - `CryptoTable`: Displays the table and handles simulated updates.
-  - `CryptoRow`: Renders each cryptocurrency row with color-coded data.
-  - `Chart`: Displays the 7-day static chart image.
+### Installation
 
-- **Redux Store**:
-  - `assetsSlice`: Manages the state of cryptocurrency assets and updates.
-
+   1. Clone the repository:
+      ```bash
+      git clone https://github.com/fareed7479/Real-Time-Crypto-Price-Tracker.git
+      cd Real-Time-Crypto-Price-Tracker
+   2. Install the dependencies:
+      ```bash
+      npm install
+   3. Start the application:
+      ```bash
+      npm stat
+### Usage
+The application will display a table with the current prices of the supported cryptocurrencies.
+Prices will update every few seconds to simulate real-time data.
+You can view the price changes in percentage, with color coding to indicate increases (green) and decreases (red).
 
