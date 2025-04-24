@@ -43,18 +43,4 @@ This is a React + Redux Toolkit application that tracks real-time cryptocurrency
 - **Redux Store**:
   - `assetsSlice`: Manages the state of cryptocurrency assets and updates.
 
-## Demo Video/GIF
-Create a 2-5 minute walkthrough video or GIF showcasing:
-- UI layout and responsiveness
-- Live updates of crypto prices
-- State management flow with Redux Toolkit
 
-## Bonus Ideas (Optional)
-- Integrate real WebSocket API for live data
-- Add filters and sorting features
-- Save user preferences in localStorage
-- Add unit tests for reducers and selectors
-- Convert to TypeScript for type safety
-
-## Submission Deadline
-Due Date: 25 April 2025
