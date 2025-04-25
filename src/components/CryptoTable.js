@@ -1,50 +1,18 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectAssets, updateAsset } from '../features/assets/assetsSlice';
+import React from 'react';
 import CryptoRow from './CryptoRow';
 import './CryptoTable.css';
-
-function getRandomChange() {
-  return (Math.random() * 2 - 1).toFixed(2); // random between -1 and 1
-}
+import useLiveAssets from '../hooks/useLiveAssets';
 
 function CryptoTable() {
-  const assets = useSelector(selectAssets);
-  const dispatch = useDispatch();
+  const { assets, status, error } = useLiveAssets();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      assets.forEach((asset) => {
-        const priceChange = parseFloat(getRandomChange());
-        const percentChange1h = parseFloat(getRandomChange());
-        const percentChange24h = parseFloat(getRandomChange());
-        const percentChange7d = parseFloat(getRandomChange());
-        const volumeChange = parseFloat(getRandomChange()) * 1000000;
-        const marketCapChange = parseFloat(getRandomChange()) * 1000000000;
-        const circulatingSupplyChange = parseFloat(getRandomChange()) * 100000;
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
 
-        const newPrice = Math.max(asset.price + priceChange, 0).toFixed(2);
-        const newVolume = Math.max(asset.volume_24h + volumeChange, 0).toFixed(0);
-        const newMarketCap = Math.max(asset.market_cap + marketCapChange, 0).toFixed(0);
-        const newCirculatingSupply = Math.max(asset.circulating_supply + circulatingSupplyChange, 0).toFixed(0);
-
-        dispatch(updateAsset({
-          id: asset.id,
-          changes: {
-            price: parseFloat(newPrice),
-            percent_change_1h: percentChange1h,
-            percent_change_24h: percentChange24h,
-            percent_change_7d: percentChange7d,
-            volume_24h: parseInt(newVolume, 10),
-            market_cap: parseInt(newMarketCap, 10),
-            circulating_supply: parseInt(newCirculatingSupply, 10),
-          },
-        }));
-      });
-    }, 1500);
-
-    return () => clearInterval(interval);
-  }, [assets, dispatch]);
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="crypto-table-container">
