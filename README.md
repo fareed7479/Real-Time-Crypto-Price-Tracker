@@ -49,8 +49,7 @@ The application will display a table with the current prices of the supported cr
 Prices will update every few seconds to simulate real-time data.
 You can view the price changes in percentage, with color coding to indicate increases (green) and decreases (red).
 
-
 ## 🎥 Demo
 
-[![Watch the video](https://www.loom.com/share/914413945325488c9fee880703814ec6?sid=581f5341-52b3-4bc0-a8c6-747e8e2bf723)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.loom.com/share/914413945325488c9fee880703814ec6?sid=581f5341-52b3-4bc0-a8c6-747e8e2bf723))
+[Click here to watch the video demo](https://www.loom.com/share/914413945325488c9fee880703814ec6?sid=9a92df6a-b663-4a24-bf0e-83cc6901c287)
 
