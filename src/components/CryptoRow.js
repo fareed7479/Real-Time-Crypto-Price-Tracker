@@ -41,6 +41,9 @@ function PriceChange({ value }) {
 }
 
 function CryptoRow({ index, asset }) {
+  // Assuming asset.chartData is an array of 7-day prices; if not present, simulate data
+  const chartData = asset.chartData || Array(7).fill(asset.price);
+
   return (
     <tr className="crypto-row">
       <td>{index + 1}</td>
@@ -48,7 +51,7 @@ function CryptoRow({ index, asset }) {
         <div className="token-cell">
           <img src={asset.logo} alt={asset.name} width="24" height="24" />
           <span>{asset.name} <span className="token-symbol">({asset.symbol})</span></span>
-      </div>
+        </div>
       </td>
       <td><PriceChange value={asset.price} /></td>
       <td><PercentChange value={asset.percent_change_1h} /></td>
@@ -57,7 +60,7 @@ function CryptoRow({ index, asset }) {
       <td>${formatNumberWithCommas(asset.market_cap)}</td>
       <td>${formatNumberWithCommas(asset.volume_24h)}</td>
       <td>{formatNumberApprox(asset.circulating_supply)} {asset.symbol}</td>
-      <td><Chart chartUrl={asset.chartUrl} /></td>
+      <td><Chart data={chartData} /></td>
     </tr>
   );
 }
